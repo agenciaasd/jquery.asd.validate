@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form com validação</title>
+<link href="jquery.ajaxForm.css" rel="stylesheet" type="text/css" />
+<link href="estilo.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script>
+<script src="jquery.ajaxForm.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	$("#form1").ajaxForm({
+		idIgualName: true,
+		erroPorCampo: true
+	});
+});
+</script>
+</head>
+
+<body>
+<form action="requisitada.php" method="post" name="form1" id="form1">
+	<h1>Formulario</h1>
+    <p>
+        <label for="nome"><strong>Nome</strong><br />
+            <input name="nome" type="text" content="nome" id="nome" />
+        </label>
+        <label for="usuario"><strong>Nome de Usuario</strong><br />
+            <input name="usuario" type="text" content="nome_usuario" id="nome_usuario" />
+        </label>
+        <label for="senha"><strong>Senha</strong><br />
+            <input name="senha" type="text" content="senha" />
+        </label>
+        <label for="email"><strong>Email</strong><br />
+            <input name="email" type="text" content="email" />
+        </label>
+        <label for="url"><strong>Url</strong><br />
+            <input name="url" type="text" content="url" />
+        </label>
+    </p>
+    <p>
+        <label for="rg"><strong>RG</strong><br />
+            <input name="rg" type="text" content="rg" />
+        </label>
+        <label for="cnpj"><strong>CNPJ</strong><br />
+            <input name="cnpj" type="text" content="cnpj" />
+        </label>
+        <label for="cpf"><strong>CPF</strong><br />
+            <input name="cpf" type="text" content="cpf" />
+        </label>
+    </p>
+    <p>
+    	<label>
+        	<input type="submit" name="enviar" value="Enviar" />
+        </label>
+    </p>
+    <div id="rst"></div>
+</form>
+</body>
+</html>
